@@ -28,7 +28,7 @@ export default function HeroCarousel() {
     <section className="relative py-8 sm:py-16 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         {/* Navigation arrows */}
-        <button 
+        <button
           onClick={() => setCurrentSlide(currentSlide === 0 ? slides.length - 1 : currentSlide - 1)}
           className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 z-10 p-2 sm:p-3 bg-white/80 hover:bg-white rounded-full shadow-lg transition-all"
         >
@@ -36,8 +36,8 @@ export default function HeroCarousel() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
-        
-        <button 
+
+        <button
           onClick={() => setCurrentSlide(currentSlide === slides.length - 1 ? 0 : currentSlide + 1)}
           className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-10 p-2 sm:p-3 bg-white/80 hover:bg-white rounded-full shadow-lg transition-all"
         >
@@ -48,7 +48,7 @@ export default function HeroCarousel() {
 
         {/* Carousel container */}
         <div className="relative overflow-hidden rounded-2xl">
-          <div 
+          <div
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           >
@@ -57,11 +57,11 @@ export default function HeroCarousel() {
                 <div className={`relative h-64 sm:h-80 lg:h-96 ${slide.backgroundImage} rounded-2xl overflow-hidden shadow-2xl`}>
                   {/* Background pattern overlay */}
                   <div className="absolute inset-0 bg-black/10"></div>
-                  
+
                   {/* Decorative background elements */}
                   <div className="absolute top-10 right-10 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
                   <div className="absolute bottom-10 left-10 w-24 h-24 bg-white/5 rounded-full blur-lg"></div>
-                  
+
                   {/* Content */}
                   <div className="relative z-10 p-4 sm:p-6 lg:p-8 h-full flex flex-col justify-between">
                     {/* Top label */}
@@ -81,7 +81,7 @@ export default function HeroCarousel() {
                           {slide.description}
                         </p>
                       </div>
-                      
+
                       {/* Decorative elements */}
                       <div className="hidden lg:block ml-4 lg:ml-8">
                         <div className="w-20 h-20 lg:w-32 lg:h-32 bg-white/10 rounded-full flex items-center justify-center">
@@ -94,7 +94,7 @@ export default function HeroCarousel() {
 
                     {/* Bottom button */}
                     <div className="flex justify-end">
-                      <button className="bg-gray-800 hover:bg-gray-900 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-colors text-sm sm:text-base">
+                      <button className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 sm:px-6 py-2 sm:py-3 rounded-4xl font-semibold transition-colors text-sm sm:text-base">
                         {slide.buttonText}
                       </button>
                     </div>
@@ -111,9 +111,8 @@ export default function HeroCarousel() {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'bg-gray-800 w-8' : 'bg-gray-300 hover:bg-gray-400'
-              }`}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentSlide ? 'bg-gray-800 w-8' : 'bg-gray-300 hover:bg-gray-400'
+                }`}
             />
           ))}
         </div>
