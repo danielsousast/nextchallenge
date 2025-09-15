@@ -68,8 +68,8 @@ export default function HeroCarousel() {
           nextEl: '.custom-swiper-next',
         }}
         breakpoints={{
-          650: { spaceBetween: 20, slidesPerView: 1 },
-          670: { spaceBetween: 300, slidesPerView: 2 },
+          640: { spaceBetween: 20, slidesPerView: 1 },
+          641: { spaceBetween: 300, slidesPerView: 2 },
           1000: { spaceBetween: 550, slidesPerView: 2 }
         }}
       >
