@@ -107,12 +107,12 @@ export default function GenerateSection() {
   ]
 
   return (
-    <section className="py-8 sm:py-10 px-4 sm:px-8">
+    <section className="py-8 sm:py-10 px-4 sm:px-8 bg-gray-50 dark:bg-gray-800 transition-colors">
       <div className="mx-auto">
         {/* Section header */}
         <div className="flex justify-between items-center mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Generate</h2>
-          <button className="flex items-center text-blue-600 hover:text-gray-900 font-medium text-sm sm:text-base">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">Generate</h2>
+          <button className="flex items-center text-blue-600 dark:text-blue-400 hover:text-gray-900 dark:hover:text-white font-medium text-sm sm:text-base">
             <svg className="size-4 cursor-pointer mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
@@ -125,11 +125,11 @@ export default function GenerateSection() {
           {tools.map((tool) => (
             <div
               key={tool.id}
-              className="min-h-[73px] bg-white gap-2 h-fit flex items-center rounded-2xl p-2 sm:py-0 sm:px-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+              className="min-h-[73px] bg-white dark:bg-gray-900 gap-2 h-fit flex items-center rounded-2xl p-2 sm:py-0 sm:px-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer border border-gray-100 dark:border-gray-700"
             >
               {/* Icon and tag */}
               <div className="flex items-start justify-between ">
-                <div className={`${tool.color} ${tool.background} p-2 rounded-xl bg-gray-50 group-hover:bg-gray-100 transition-colors`}>
+                <div className={`${tool.color} ${tool.background} p-2 rounded-xl bg-gray-50 dark:bg-gray-800 group-hover:bg-gray-100 dark:group-hover:bg-gray-700 transition-colors`}>
                   {tool.icon}
                 </div>
               </div>
