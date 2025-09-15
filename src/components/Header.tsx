@@ -3,19 +3,22 @@
 import { useTheme } from '@/contexts/ThemeContext'
 
 export default function Header() {
-  const { theme, toggleTheme, resetTheme } = useTheme()
+  const { theme, toggleTheme } = useTheme()
 
   return (
-    <header className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-4 sm:px-6 py-4 transition-colors">
+    <header className="bg-white border-b border-gray-200 px-4 sm:px-6 py-4">
       <div className="flex items-center justify-between w-full">
         {/* Left side - Logo and User */}
         <div className="flex items-center space-x-2 sm:space-x-4">
           <div className="w-8 h-8 bg-black rounded flex items-center justify-center">
             <span className="text-white font-bold text-lg cursor-pointer">K</span>
           </div>
+          <div className="text-xs text-gray-500">
+            Theme: {theme}
+          </div>
           <div className="hidden sm:flex items-center space-x-1 pl-7">
             <div className="flex items-center justify-center size-8 rounded-full bg-gray-200 cursor-pointer">
-              <svg className="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
               </svg>
             </div>
@@ -28,8 +31,8 @@ export default function Header() {
 
 
         {/* Center - Navigation Icons */}
-        <nav className="hidden lg:flex items-center space-x-2 xl:space-x-4 bg-gray-100 dark:bg-gray-800 p-2 rounded-2xl">
-          <button className="py-2 px-3 hover:bg-white dark:hover:bg-gray-700 hover:shadow-md rounded-xl transition-all cursor-pointer group">
+        <nav className="hidden lg:flex items-center space-x-2 xl:space-x-4 bg-gray-100 p-2 rounded-2xl">
+          <button className="py-2 px-3 hover:bg-white hover:shadow-md rounded-xl transition-all cursor-pointer group">
             <svg className="w-5 h-5" fill="none" stroke="#4C4D4C" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
             </svg>
@@ -70,20 +73,20 @@ export default function Header() {
 
         {/* Right side - Actions */}
         <div className="flex items-center space-x-2 sm:space-x-4">
-          <button className="hidden sm:flex items-center text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:shadow-md font-medium px-2 transition-all cursor-pointer bg-gray-100 dark:bg-gray-800 p-1 rounded-xl">
+          <button className="hidden sm:flex items-center text-gray-700 hover:text-gray-900 hover:shadow-md font-medium px-2 transition-all cursor-pointer bg-gray-100 p-1 rounded-xl">
             <svg className="w-5 h-5" fill="none" stroke="#4C4D4C" viewBox="0 0 26 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 10V6C4 4.89543 4.89543 4 6 4H12M4.02693 18.329C4.18385 19.277 5.0075 20 6 20H18C19.1046 20 20 19.1046 20 18V14.1901M4.02693 18.329C4.00922 18.222 4 18.1121 4 18V15M4.02693 18.329L7.84762 14.5083C8.52765 13.9133 9.52219 13.8481 10.274 14.3494L10.7832 14.6888C11.5078 15.1719 12.4619 15.1305 13.142 14.5864L15.7901 12.4679C16.4651 11.9279 17.4053 11.8855 18.1228 12.3484C18.2023 12.3997 18.2731 12.4632 18.34 12.5301L20 14.1901M20 14.1901V6C20 4.89543 19.1046 4 18 4H17M11 9C11 10.1046 10.1046 11 9 11C7.89543 11 7 10.1046 7 9C7 7.89543 7.89543 7 9 7C10.1046 7 11 7.89543 11 9Z" />
             </svg>
             <span>Gallery</span>
           </button>
-          <button className="hidden sm:flex items-center text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:shadow-md font-medium px-2 transition-all cursor-pointer bg-gray-100 dark:bg-gray-800 p-1 rounded-xl">
+          <button className="hidden sm:flex items-center text-gray-700 hover:text-gray-900 hover:shadow-md font-medium px-2 transition-all cursor-pointer bg-gray-100 p-1 rounded-xl">
             <svg className="w-5 h-5" fill="#4C4D4C" stroke="#4C4D4C" viewBox="0 0 24 18">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={0.5} d="M15.668 6.017c-0.957-3.557-3.863-6.017-7.168-6.017-3.295 0-6.212 2.464-7.168 6.017-0.747 0.082-1.332 0.712-1.332 1.483v4c0 0.625 0.382 1.16 0.924 1.385 0.194 1.747 1.663 3.115 3.461 3.115h2.707c0.207 0.581 0.757 1 1.408 1h3c0.827 0 1.5-0.673 1.5-1.5s-0.673-1.5-1.5-1.5h-3c-0.651 0-1.201 0.419-1.408 1h-2.707c-1.208 0-2.217-0.86-2.449-2h1.064v-1h1v-5h-1v-1h-0.606c0.913-2.961 3.352-5 6.106-5 2.762 0 5.193 2.037 6.106 5h-0.606v1h-1v5h1v1h1.506c0.824 0 1.494-0.673 1.494-1.5v-4c0-0.771-0.585-1.401-1.332-1.483zM8.5 15h3c0.275 0 0.5 0.224 0.5 0.5s-0.225 0.5-0.5 0.5h-3c-0.275 0-0.5-0.224-0.5-0.5s0.225-0.5 0.5-0.5zM2 12h-0.506c-0.272 0-0.494-0.224-0.494-0.5v-4c0-0.276 0.222-0.5 0.494-0.5h0.506v5zM16 11.5c0 0.276-0.222 0.5-0.494 0.5h-0.506v-5h0.506c0.272 0 0.494 0.224 0.494 0.5v4z" />
             </svg>
             <span>Support</span>
           </button>
-          <button className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 hover:shadow-md rounded-lg transition-all cursor-pointer">
-            <svg className="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <button className="p-2 hover:bg-gray-100 hover:shadow-md rounded-lg transition-all cursor-pointer">
+            <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.00195 17H5.60636C4.34793 17 3.71872 17 3.58633 16.9023C3.4376 16.7925 3.40126 16.7277 3.38515 16.5436C3.37082 16.3797 3.75646 15.7486 4.52776 14.4866C5.32411 13.1835 6.00031 11.2862 6.00031 8.6C6.00031 7.11479 6.63245 5.69041 7.75766 4.6402C8.88288 3.59 10.409 3 12.0003 3C13.5916 3 15.1177 3.59 16.2429 4.6402C17.3682 5.69041 18.0003 7.11479 18.0003 8.6C18.0003 11.2862 18.6765 13.1835 19.4729 14.4866C20.2441 15.7486 20.6298 16.3797 20.6155 16.5436C20.5994 16.7277 20.563 16.7925 20.4143 16.9023C20.2819 17 19.6527 17 18.3943 17H15.0003M9.00195 17L9.00031 18C9.00031 19.6569 10.3435 21 12.0003 21C13.6572 21 15.0003 19.6569 15.0003 18V17M9.00195 17H15.0003" />
             </svg>
           </button>
@@ -92,24 +95,17 @@ export default function Header() {
             className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 hover:shadow-md rounded-lg transition-all cursor-pointer"
           >
             {theme === 'dark' ? (
-              <svg className="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
               </svg>
             ) : (
-              <svg className="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
               </svg>
             )}
           </button>
-          <button 
-            onClick={resetTheme}
-            className="p-2 bg-red-500 hover:bg-red-600 text-white rounded-lg transition-all cursor-pointer text-xs"
-            title="Reset Theme"
-          >
-            Reset
-          </button>
-          <button className="flex items-center justify-center p-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 hover:shadow-md size-10 rounded-full transition-all cursor-pointer">
-            <svg className="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <button className="flex items-center justify-center p-2 bg-gray-200 hover:bg-gray-300 hover:shadow-md size-10 rounded-full transition-all cursor-pointer">
+            <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
             </svg>
           </button>

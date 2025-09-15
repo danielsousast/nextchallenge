@@ -53,7 +53,7 @@ export default function HeroCarousel() {
   ]
 
   return (
-    <section className="relative sm:pt-18 px-4 sm:pl-8 sm:pr-0 bg-white dark:bg-gray-900 transition-colors">
+    <section className="relative sm:pt-18 px-4 sm:pl-8 sm:pr-0 bg-white">
 
 
 
