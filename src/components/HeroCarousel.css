@@ -1,0 +1,5 @@
+/* Style for the active pagination bullet */
+.swiper-pagination-bullet-active {
+    background-color: #4c4c4c;
+    opacity: 1;
+}
