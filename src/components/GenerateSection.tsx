@@ -107,12 +107,12 @@ export default function GenerateSection() {
   ]
 
   return (
-    <section className="py-8 sm:py-10 px-4 sm:px-8 bg-gray-50">
+    <section className="dark:bg-neutral-900 py-8 sm:py-10 px-4 sm:px-8">
       <div className="mx-auto">
         {/* Section header */}
         <div className="flex justify-between items-center mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Generate</h2>
-          <button className="flex items-center text-blue-600 hover:text-gray-900 font-medium text-sm sm:text-base">
+          <h2 className="dark:text-white text-2xl sm:text-3xl font-bold text-gray-900">Generate</h2>
+          <button className="flex cursor-pointer items-center text-blue-600 hover:text-blue-800 font-medium text-sm sm:text-base">
             <svg className="size-4 cursor-pointer mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
@@ -125,7 +125,7 @@ export default function GenerateSection() {
           {tools.map((tool) => (
             <div
               key={tool.id}
-              className="min-h-[73px] bg-white gap-2 h-fit flex items-center rounded-2xl p-2 sm:py-0 sm:px-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer border border-gray-100"
+              className="min-h-[73px] dark:bg-neutral-900 bg-white gap-2 h-fit flex items-center rounded-2xl p-2 sm:py-0 sm:px-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer"
             >
               {/* Icon and tag */}
               <div className="flex items-start justify-between ">
@@ -142,17 +142,17 @@ export default function GenerateSection() {
                       {tool.tag}
                     </span>
                   )}
-                  <h3 className="text-base sm:text-lg font-semibold text-gray-900">
+                  <h3 className="dark:text-gray-200 text-base sm:text-lg font-semibold text-gray-900">
                     {tool.name}
                   </h3>
                 </div>
-                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                <p className="dark:text-neutral-400 text-gray-600 text-xs sm:text-sm leading-relaxed">
                   {tool.description}
                 </p>
               </div>
 
               {/* Button */}
-              <button className="cursor-pointer ml-auto w-25 h-10 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-2 px-4 rounded-3xl transition-colors group-hover:bg-gray-300 text-sm">
+              <button className="dark:bg-neutral-700 dark:text-white dark:hover:bg-neutral-600 cursor-pointer ml-auto w-25 h-10 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-2 px-4 rounded-3xl transition-colors text-sm">
                 Open
               </button>
             </div>
