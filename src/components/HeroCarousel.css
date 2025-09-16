@@ -3,3 +3,13 @@
     background-color: #4c4c4c;
     opacity: 1;
 }
+
+.dark .swiper-pagination-bullet {
+    background-color: #4d4d4d;
+    opacity: 1;
+}
+
+.dark .swiper-pagination-bullet-active {
+    background-color: #d3d3d3;
+    opacity: 1;
+}
